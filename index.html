@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Andrey Zagoruy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        html {
+            font-size: 20px
+        }
+        
+        @media (min-width: 2000px) {
+            html {
+                font-size: 40px
+            }
+        }
+        
+        @media (max-width: 800px) {
+            html {
+                font-size: 16px
+            }
+        }
+        
+        @media print {
+            html {
+                font-size: 12pt
+            }
+        }
+        
+        body {
+            font: 1rem/1.6em Helvetica, Arial, sans-serif;
+            color: #939393;
+            text-align: center
+        }
+        
+        h1 {
+            color: #565656;
+            font-size: 2.8rem;
+            line-height: 1.2em
+        }
+        
+        @media (max-width: 800px) {
+            h1 {
+                font-size: 2rem
+            }
+        }
+        
+        h2 {
+            text-transform: uppercase;
+            position: relative;
+            color: #000;
+            margin: 2em 0;
+            font-size: 1.6em;
+            text-shadow: 4px 0 0 #fff, -4px 0 0 #fff, 0 4px 0 #fff, 0 -4px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff
+        }
+        
+        @media (max-width: 800px) {
+            h2 {
+                margin: 2em 0 1em
+            }
+        }
+        
+        h2:before,
+        h2:after {
+            content: '';
+            top: 50%;
+            position: absolute;
+            border: 1px solid #d4d2d1;
+            z-index: -1
+        }
+        
+        @media (max-width: 800px) {
+            h2:before,
+            h2:after {
+                content: none
+            }
+        }
+        
+        h2:after {
+            left: 0;
+            right: 60%;
+            right: calc(50% + 200px)
+        }
+        
+        h2:before {
+            right: 0;
+            left: 60%;
+            left: calc(50% + 200px)
+        }
+        
+        h3 {
+            color: #565656;
+            text-transform: uppercase
+        }
+        
+        h3 a {
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit
+        }
+        
+        p,
+        ul,
+        h3,
+        h4 {
+            text-align: left
+        }
+        
+        p {
+            margin: 1rem 0
+        }
+        
+        ul {
+            padding: 0
+        }
+        
+        li {
+            display: inline-block;
+            vertical-align: top
+        }
+        
+        a:hover {
+            opacity: 0.6
+        }
+        
+        @media print {
+            a {
+                text-decoration: none
+            }
+        }
+        
+        section {
+            margin: 5rem auto;
+            position: relative;
+            width: 80%
+        }
+        
+        @media (max-width: 800px) {
+            section {
+                width: 100%;
+                width: calc(100% - 2rem)
+            }
+        }
+        
+        .introduction img {
+            border: 4px solid #d4d2d1;
+            border-radius: 50%;
+            height: 14rem;
+            width: 14rem
+        }
+        
+        @media (max-width: 800px) {
+            .introduction img {
+                height: 15.6rem;
+                width: 15.6rem
+            }
+        }
+        
+        .introduction h1 {
+            margin-bottom: 0
+        }
+        
+        .introduction h4 {
+            text-align: center;
+            margin: 0 0 3em;
+            font-weight: normal
+        }
+        
+        .introduction ul {
+            text-align: center
+        }
+        
+        @media (max-width: 800px) {
+            .introduction ul {
+                text-align: left
+            }
+        }
+        
+        .introduction li {
+            color: #6b6b6b;
+            margin: 0 0.3em
+        }
+        
+        @media (max-width: 800px) {
+            .introduction li {
+                display: block;
+                margin-bottom: 0.6em
+            }
+        }
+        
+        .introduction li:first-child {
+            display: block
+        }
+        
+        .introduction strong {
+            text-transform: uppercase
+        }
+        
+        .introduction a {
+            color: inherit
+        }
+        
+        .skills li {
+            color: #565656;
+            text-transform: uppercase;
+            margin-right: 0.5em;
+            font-weight: bold
+        }
+        
+        .skills li:after {
+            content: ';'
+        }
+        
+        .experience li {
+            width: 49%;
+            box-sizing: border-box
+        }
+        
+        @media (min-width: 800px) {
+            .experience li:nth-child(odd) {
+                padding-right: 0.6em
+            }
+            .experience li:nth-child(even) {
+                padding-left: 0.6em
+            }
+        }
+        
+        @media (max-width: 800px) {
+            .experience li {
+                width: 100%
+            }
+        }
+        
+        @media print {
+            .projects a {
+                text-decoration: none
+            }
+            .projects a:link:after,
+            .projects a:visited:after {
+                color: #000;
+                text-transform: lowercase;
+                content: " [ " attr(href) " ] ";
+                font-size: 0.8em
+            }
+        }
+        
+        .socials li {
+            margin: 0 1rem 1rem 0
+        }
+        
+        .socials li img {
+            height: 2rem
+        }
+        
+        @media print {
+            .socials a {
+                text-decoration: none
+            }
+            .socials a:link:after,
+            .socials a:visited:after {
+                color: #000;
+                text-transform: lowercase;
+                content: " [ " attr(href) " ] ";
+                font-size: 0.8em;
+                padding-left: .8em;
+                top: -0.6em;
+                position: relative
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="introduction">
+        <h1>Andrey Zagoruy</h1>
+        <h4>(Back-end developer)</h4>
+        <ul>
+            <li><strong>Location: </strong><a href="https://www.google.com.ua/maps/place/%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%81%D1%8B,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/@49.4310824,31.9787417,12z/data=!3m1!4b1!4m5!3m4!1s0x40d14b866064977f:0xf8dce723a9cbb5d8!8m2!3d49.444433!4d32.059767?hl=ru" target="_blank">Ukraine, Cherkassy</a></li>
+            <li><strong>E-MAIL: </strong><a href="mailto:andrey.zagoruy@gmail.com">andrey.zagoruy@gmail.com</a></li>
+            <li><strong>Phone: </strong><a href="callto:+380675179401">+38 (067) 5179401</a></li>
+        </ul>
+    </section>
+    <section class="overview">
+        <h2>Overview</h2>
+        <p>I'm a professional Back-end developer with more than two years of experience. I have great skills in server-side technologies.</p>
+        <p>I develop hassle free content management systems for websites and services which can be used with ease by customers with little or no knowledge in modern technologies. Also, I constanlty improve my skills in server adrministration side(DevOps) so I can make things work like a charm in no time!</p>
+    </section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>PHP</li>
+            <li>CouchCMS</li>
+            <li>OctoberCMS</li>
+            <li>Laravel</li>
+            <li>SQL</li>
+            <li>Unix-based systems</li>
+            <li>Vagrant</li>
+            <li>Docker</li>
+            <li>HTML5</li>
+            <li>Pug(Jade) Language</li>
+            <li>CSS3</li>
+            <li>Sass/Less</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+        </ul>
+    </section>
+    <section class="education">
+        <h2>Education</h2>
+        <h3>National Technical University of Ukraine (Kyiv Polytechnic Institute) </h3>
+        <p>Faculty of informatics and computer science (Automated systems of data processing and management ) </p>
+        <p>2008 – 2015</p>
+    </section>
+    <section class="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <h3>Front End</h3>
+                <p>Freelance</p>
+                <p>January 2012 - 2014</p>
+            </li>
+            <li>
+                <h3>Full-Stack developer</h3>
+                <p>Intertech Company</p>
+                <p>2015 - 2016</p>
+            </li>
+            <li>
+                <h3>Back End</h3>
+                <p>Freelance</p>
+                <p>2016 - Present</p>
+            </li>
+        </ul>
+    </section>
+    <section class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <h3>JUSTICON</h3>
+                <p>PHP, MySQL, CouchCMS</p>
+                <p>Custom fitted content management system for law agancy with huge amoung of closely related services</p>
+            </li>
+            <li>
+                <h3>BAMBOOK ACADEMY</h3>
+                <p>PHP, MySQL, Laravel, OctoberCMS</p>
+                <p>Web services where people can apply for a speaking course or order a translation service</p>
+            </li>
+            <li>
+                <h3>DIMLAND</h3>
+                <p>PHP, MySQL, CouchCMS, NodeJS</p>
+                <p>Real Estate Agency project with huge amound of intelligent data processing</p>
+            </li>
+            <li>
+                <h3>DevOps and server configuration</h3>
+                <p>Vagrant, Docker, Unix</p>
+                <p>Lots of experience in deploying services and applications on different hardware</p>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
